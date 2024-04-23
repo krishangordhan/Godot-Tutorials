@@ -3,7 +3,7 @@ using System;
 
 public partial class mob : RigidBody2D
 {
-	// Called when the node enters the scene tree for the first time.
+	// Called when the node enters the scene tree for the first time.1
 	public override void _Ready()
 	{
 	}
