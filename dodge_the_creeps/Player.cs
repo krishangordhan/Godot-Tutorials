@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 public partial class Player : Area2D
@@ -78,8 +79,9 @@ public partial class Player : Area2D
         }
     }
 
-    private void OnBodyEntered(Node2D body)
+    private void OnPlayerBodyEntered(Node2D body)
     {
+        GD.Print("Got hit.");
         Hide();
         EmitSignal(SignalName.Hit);
 
