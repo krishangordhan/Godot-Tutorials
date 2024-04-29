@@ -12,7 +12,6 @@ public partial class Main : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		GD.Print("This is a test to see if game starts");
 		NewGame();
 	}
 
@@ -46,7 +45,6 @@ public partial class Main : Node
 
 	private void OnStartTimerTimeout()
 	{
-		GD.Print("Timer Run");
 		GetNode<Timer>("MobTimer").Start();
 		GetNode<Timer>("ScoreTimer").Start();
 	}

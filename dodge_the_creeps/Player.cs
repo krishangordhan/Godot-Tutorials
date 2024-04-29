@@ -15,7 +15,7 @@ public partial class Player : Area2D
     {
         Position = position;
         Show();
-        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
+        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = false;
     }
 
     public override void _Ready()
@@ -81,7 +81,6 @@ public partial class Player : Area2D
 
     private void OnPlayerBodyEntered(Node2D body)
     {
-        GD.Print("Got hit.");
         Hide();
         EmitSignal(SignalName.Hit);
 
